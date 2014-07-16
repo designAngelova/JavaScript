@@ -8,9 +8,9 @@
 // Note: we assume that there are no leap years.
 
 function calcSupply(age, max, amount) {
-	return (((max - age) * 365) * amount);
+	return (((max - age) * 365) * amount+"kg of chocolate would be enough until I am " +max+" years old.");
 }
 
-console.log(calcSupply(38, 118, 0.5) + "kg of chocolate would be enough until I am 118 years old.");
-console.log(calcSupply(20, 87, 2) + "kg of fruits would be enough until I am 118 years old.");
-console.log(calcSupply(16, 102, 1.1) + "kg of nuts would be enough until I am 118 years old.");
+console.log(calcSupply(38, 118, 0.5));
+console.log(calcSupply(20, 87, 2));
+console.log(calcSupply(16, 102, 1.1));

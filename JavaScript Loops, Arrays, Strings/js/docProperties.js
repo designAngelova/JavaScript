@@ -1,6 +1,6 @@
 function displayProperties() {
 	var properties = [];
-	for (elements in window) {
+	for (elements in document) {
 		properties.push(elements);
 	}
 	properties.sort();

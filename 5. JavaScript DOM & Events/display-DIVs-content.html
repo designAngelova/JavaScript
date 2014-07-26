@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Model - Event Attributes</title>
+    <link rel="stylesheet" href="css/01.css" />
+</head>
+
+
+<html>
+<body>
+  <div>first div</div>
+  <div>second div</div>
+  <div class="empty"></div>
+  <div>third div<div>inner div</div></div>
+  <ul id="result"></ul>
+  <script>
+  while(document.getElementsByTagName('div')){
+     var text = document.getElementsByTagName('div').innerText;
+    }
+     console.log(text);
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>canvas demo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+        <style>
+    	#canvas {
+    		border: 2px solid black;
+    	}
+    	</style>
+    </head>
+    <body>
+    	
+
+        <canvas id="canvas" width='1000' height='800'>
+        This is not supported for you browser!
+        </canvas>
+        <script>
+        var canvas = document.getElementById('canvas');
+        context = canvas.getContext('2d');
+       
+        context.strokeStyle ='black';
+        context.fillStyle ='orange';
+        //context.fillRect(100,100,100,100);
+        
+        //context.strokeStyle = 'red';
+       // context.strokeRect(100,100,100,100);
+
+        context.beginPath();
+       // context.moveTo(x,y);
+       context.moveTo(50,50);
+       context.lineTo(150, 150);
+       context.lineTo(250,100);
+	// enter from end to begin point
+       context.closePath();
+       
+       context.fill();
+       context.stroke();
+
+
+       context.beginPath();
+       context.fillStyle ='pink';
+       context.strokeStyle ='#7D26CD';
+        
+       context.moveTo(200,200);
+       context.rect(250,250,150,150);
+       context.fill();
+       context.stroke();
+       context.closePath();
+       // draw radius
+      // arc(x,y, radius, from, to(angles in radians) 
+      	// radians = degrees *PI/180
+
+      	context.beginPath();
+      	context.fillStyle ='green';
+       	context.strokeStyle ='black';
+       	
+       	var cx = canvas.width/2,
+       	    cy = canvas.height/2,
+       	    radius = 150, 
+       	    ax = canvas.width/3,
+       	    ay = canvas.height/3;
+		
+	
+       	//context.arc(cx, cy, radius, 0, 2*Math.PI);
+       	
+       //	context.fill();
+       // context.stroke();
+
+
+       	context.arc(cx, cy, radius,
+       		75 * Math.PI/180,
+       		175 * Math.PI/180,
+       		false);
+       	context.fill();
+        context.stroke();
+         context.closePath();
+
+         context.beginPath();
+         context.moveTo(500,500);
+         context.quadraticCurveTo(500, 150, 50, 200);
+         context.stroke();
+         
+         // clear all ca
+         context.clearRect(0,0,canvas.width, canvas.height);
+
+         context.beginPath();
+         var sx = 50,
+          	sy = 50,
+         	ex = 450,
+         	ey = 50,
+         	cx = 250,
+         	cy = 1000;
+
+         	function animationFrame(){
+         		context.clearRect(0,0, canvas.width, canvas.height);
+         		context.beginPath();
+         		context.moveTo(sx, sy);
+         		context.lineTo(ex, ey);
+         		context.moveTo(sx, sy);
+
+         		context.quadraticCurveTo(cx, cy, ex, ey);
+         		cx+=10;
+         		context.stroke();
+         		requestAnimationFrame(animationFrame);
+         	}
+animationFrame();
+
+        
+        </script>
+       
+    </body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pictures</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="author" href="humans.txt">
+</head>
+<body>
+  <canvas id="canvas" width='1800' height='800'>
+    This is not supported for you browser!
+  </canvas>
+  <script>
+  var canvas = document.getElementById('canvas');
+  ctx = canvas.getContext('2d');
+
+  ctx.beginPath();
+  ctx.fillStyle ='#90CAD7';
+  ctx.strokeStyle ='#597E86';
+  ctx.lineWidth = 5;
+
+  var cx = 200,
+  cy = 300,
+  radius = 120, 
+  ax = canvas.width/3,
+  ay = canvas.height/3;
+
+
+  ctx.arc(cx, cy, radius, 0, 2*Math.PI);
+
+
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
+
+  ctx.beginPath();
+
+
+      // scale context horizontally
+      ctx.scale(1.5, 1);
+
+      // scale context horizontally
+      ctx.lineWidth = 2;
+      ctx.arc(170, 280, 15, 0, 2*Math.PI);
+      ctx.save();
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(100, 280, 15, 0, 2*Math.PI);
+      ctx.stroke();
+      ctx.closePath();
+
+
+      ctx.beginPath();
+
+      ctx.fillStyle ='#597E86';
+
+      ctx.scale(1, 2);
+
+      // scale context horizontally
+      
+      ctx.arc(95, 140, 6, 0, 2*Math.PI);
+
+
+
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+
+      ctx.fillStyle ='#597E86';
+
+      
+
+
+      
+      ctx.arc(165, 140, 6, 0, 2*Math.PI);
+
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.lineTo(130, 135);
+      ctx.lineTo(120, 165);
+      ctx.lineTo(140, 165);
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.scale(4, 1);
+
+      // scale context horizontally
+      
+      ctx.arc(32, 185, 8, 0, 2*Math.PI);
+
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.fillStyle = '#336699';
+      ctx.strokeStyle = '#000000';
+
+      ctx.scale(1.5,1);
+      ctx.arc(22, 105, 15, 0, 2*Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+//top elipse
+
+
+
+ctx.beginPath();
+ctx.lineWidth = 0.5;
+ctx.lineTo(14, 40);
+ctx.lineTo(14, 100);
+ctx.moveTo(14, 100);
+ctx.bezierCurveTo(14,130,32,100,30,100);
+ctx.lineTo(30, 40);
+ctx.lineTo(14, 40);
+
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+
+
+ctx.scale(1,1);
+ctx.arc(22, 40, 8, 0, 2*Math.PI);
+
+ctx.fill();
+ctx.stroke();
+
+ctx.closePath();
+
+         //House
+
+         ctx.beginPath();
+         ctx.fillStyle='#975B5B';
+
+         ctx.fillRect(50,80,60,170);
+         ctx.strokeRect(50,80,60,170);
+         ctx.fillStyle='#000000';
+         ctx.fillRect(55,100,10,22);
+         ctx.fillRect(55,125,10,22);
+         ctx.fillRect(66,100,10,22);
+         ctx.fillRect(66,125,10,22);
+
+         ctx.fillRect(86,100,10,22);
+         ctx.fillRect(97,125,10,22);
+         ctx.fillRect(97,100,10,22);
+         ctx.fillRect(86,125,10,22);
+
+         ctx.fillRect(86,170,10,22);
+         ctx.fillRect(97,195,10,22);
+         ctx.fillRect(97,170,10,22);
+         ctx.fillRect(86,195,10,22);
+          //door
+
+          ctx.lineTo(58, 200);
+          ctx.lineTo(58,250);
+          ctx.stroke();
+          ctx.closePath();
+          
+          ctx.beginPath();
+          ctx.lineTo(66, 192);
+          ctx.lineTo(66,250);
+          ctx.stroke();
+          ctx.closePath();
+          
+          ctx.beginPath();
+          ctx.lineTo(74,200);
+          ctx.lineTo(74,250);
+
+          ctx.stroke();
+          ctx.closePath();
+
+          ctx.beginPath();
+          
+          ctx.arc(63, 222, 1.5, 0, 2*Math.PI);
+          ctx.stroke();
+          ctx.closePath();
+          ctx.beginPath()
+          ctx.arc(69, 222, 1.5, 0, 2*Math.PI);
+          ctx.stroke();
+          ctx.closePath();
+          ctx.beginPath();
+
+          ctx.arc(66, 200,8,
+           10 * Math.PI/180,
+           175 * Math.PI/180,
+           true);
+
+          ctx.stroke();
+          ctx.closePath();
+
+       //roof
+       ctx.beginPath();
+       ctx.fillStyle='#975B5B';
+       ctx.lineTo(50,80);
+       ctx.lineTo(82,10);
+       ctx.lineTo(110,81);
+       ctx.lineTo(50,80);
+       ctx.fill();
+
+
+       ctx.stroke();
+       ctx.closePath();
+
+
+       ctx.beginPath();
+       
+       ctx.strokeRect(90,20, 6,50);
+       ctx.fillRect(90,20, 6,51);
+
+       ctx.stroke();
+       ctx.closePath();
+        
+       ctx.stroke();
+       ctx.closePath();
+       ctx.beginPath();
+
+       ctx.scale(1, 1);
+
+       ctx.arc(93, 20, 2.8, 0, 2*Math.PI);
+       
+ctx.fill();
+       ctx.stroke();
+       ctx.closePath();
+
+       </script>
+     </body>
+     </html>

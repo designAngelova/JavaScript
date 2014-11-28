@@ -1,0 +1,14 @@
+{
+  "name": "demos",
+  "version": "3",
+  "description": "s",
+  "main": "s",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

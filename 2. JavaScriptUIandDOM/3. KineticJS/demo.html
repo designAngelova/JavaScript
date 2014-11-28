@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KinrticJS</title>
+
+	<link rel="author" href="humans.txt">
+</head>
+<body>
+	<div id="kinetic-container"></div>
+	<script src = 'bower_components/kineticjs/kinetic.min.js'></script>
+	<script>
+	var stage = new Kinetic.Stage({
+		container: 'kinetic-container',
+		width:500,
+		height:500
+
+	});
+	var layer = new Kinetic.Layer();
+	var rect = new Kinetic.Rect({
+		x:50,
+		y:50,
+		width:150,
+		height:200,
+		fill:'orange',
+		stroke:'green',
+		strokeWidth:'15'
+	});
+
+	layer.add(rect);
+	stage.add(layer);
+	var circle = new Kinetic.Circle({
+		x:250,
+		y:250,
+		radius:150,
+
+		fill:'orange',
+		stroke:'green',
+		strokeWidth:'15'
+	});
+	layer.add(circle);
+	stage.add(layer);
+
+	var line = new Kinetic.Line({
+	points: [50,100,100,50,200,100, 100,150],
+	closed:true,
+	stroke:'black',
+	
+	tension:2
+});
+layer.add(line);
+	stage.add(layer);
+	</script>
+</body>
+</html>
